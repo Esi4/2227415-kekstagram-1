@@ -1,15 +1,14 @@
 function getRandom(min, max) {
-  if((min >= 0 && max >= 0) && (min < max)) {
-    return Math.random() * (max - min) + min;
-  } else {return 0;}
-}
-
-function trueLength(str, len) {
-  if (str.length <= len) {
-    return true;
+  if (min > max || min < 0 || max < 0) {
+    throw new Error('Неверный диапазон');
+  } else {
+    return Math.floor(Math.random() * (max + 1 - min) + min);
   }
-  else {return false;}
+}
+//https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+
+function stringLength(str, maxLength) {
+  return str.length <= maxLength;
 }
 
-getRandom(4, 6);
-trueLength('FFFFFF', 10);
+//https://stackoverflow.com/
