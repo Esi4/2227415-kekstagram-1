@@ -1,4 +1,4 @@
-import {renderPhotos, postImg, getPic} from './pic.js';
+import {renderPhotos} from './pic.js';
 import {closeUp} from './upload.js';
 import {submitForm} from './success-upload.js';
 import {initEffects} from './effects.js';

@@ -21,7 +21,7 @@ const renderPhoto = (ph) => {
   return onePhoto;
 };
 
-export const renderPhotos = (pictures) => { //Рендеринг всех фотографий
+const renderPhotos = (pictures) => { //Рендеринг всех фотографий
   const photoListFragment = document.createDocumentFragment();
 
   pictures.forEach((picture) => {
@@ -31,4 +31,4 @@ export const renderPhotos = (pictures) => { //Рендеринг всех фот
   picsList.appendChild(photoListFragment);
 };
 
-export {postImg, renderPhotos};
+export {renderPhotos};
